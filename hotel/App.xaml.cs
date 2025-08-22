@@ -7,7 +7,7 @@
             
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new interface_grafica.contratacaoHospedagem());
 
         } 
 
