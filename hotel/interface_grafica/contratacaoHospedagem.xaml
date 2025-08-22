@@ -10,7 +10,7 @@
 
         <Label Text="Calculo da diária" FontFamily="Kalam-Regular" FontSize="50" TextColor="{StaticResource Primary}"/>
 
-        <Frame Padding="10">
+        <Border Stroke="{StaticResource Primary}" StrokeThickness="1" Padding="10" BackgroundColor="Transparent">
 
             <VerticalStackLayout>
 
@@ -32,9 +32,9 @@
 
                 <Label Text="Escolha sua Suite"/>
 
-                <Picker x:Name="pck_quarto" Title="Selecione sua Acomodação"/>
+                <Picker x:Name="pck_quarto" Title="Selecione sua Acomodação" ItemDisplayBinding="{Binding Descricao}"/>
 
-                <Frame Padding="10" Margin="10">
+                <Border Stroke="{StaticResource Primary}" StrokeThickness="1" Padding="10" Margin="10" BackgroundColor="Transparent">
 
                     <VerticalStackLayout>
 
@@ -44,7 +44,7 @@
 
                             <Label Text="Check-in"/>
 
-                            <DatePicker x:Name="dtpck_checkin" Format="dd/MM/yyyy"/>
+                            <DatePicker x:Name="dtpck_checkin" Format="dd/MM/yyyy" DateSelected="dtpck_checkin_DateSelected"/>
 
                         </HorizontalStackLayout>
 
@@ -58,13 +58,13 @@
 
                     </VerticalStackLayout>
                     
-                </Frame>
+                </Border>
 
-                <Button Text="Avançar"/>
+                <Button Text="Avançar" Clicked="Button_Clicked"/>
 
             </VerticalStackLayout>
 
-        </Frame>
+        </Border>
 
     </VerticalStackLayout>
 </ContentPage>
